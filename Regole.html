@@ -4,10 +4,230 @@
 	<title> Regole </title>
 		<a href="javascript:history.back()"><img src="Img/back.jpg" height="45" width="45"></a>
 		<a href="index.html"><img src="Img/Menu.png" align="right" height="75" width="75"></a>
+		<style>
+			table{
+				border-collapse: collapse;
+				width: 50%
+			}
+			 td, th{
+				 border: 1px solid #ddd;
+				 padding: 8px;
+				 text-align: center;
+			}
+			 tr:nth-child(even){background-color: #f2f2f2;}
+			 tr:hover {background-color: #ddd;}
+		</style>
 </head>
 <body>
 	<div>
-	<img src="Img/Wip.png">
+	<h2 align="center">Regole per la creazione del personaggio.</h2>
+	<h4>Caratteristiche:</h4>
+	<p>Le sei caratteristiche del personaggio si comprano usando punti caratteristica, si ha a disposizione 30 punti caratteristica iniziali.
+	I valori comprabili seguono questa tabella per i costi:</p>
+	<table id="caratteristiche">
+		<tr>
+			<th>Valore<br> della caratteristica</th>
+			<th>Costo<br> in punti caratteristica</th>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>12</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>-1</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>-2</td>
+		</tr>
+	</table>
+	<p>I bonus razziali sono rimossi a favore di un generico +2 a una singola caratteristica e un +1 ad una seconda caratteristica.</p>
+	</div>
+	<div>
+		<h4>Razza e Classe:</h4>
+		<p>Tutte le <a href="Razze.html">razze</a> presentate nella sezione apposita sono disponibili come scelte, inoltre si possono creare ibridi di due o più razze, giustificandolo da background, chiedendo al master i bonus razziali che si guadagnano in quel caso.</p>
+		<p>Per <a href="Razze.html">razze</a> non presenti nella lista consultare il master.</p>
+		<p>Le classi e sottoclassi disponibili sono tutte quelle presentate su <a href="https://dnd5e.wikidot.com">Wikidot</a> ad esclusione di quelle nelle Unearthed Arcana. </p>
+	</div>
+	<div>
+		<h4>Background:</h4>
+		<p>Per la costruzione del background a livello meccanico si guadagnano:</p>
+		<ul>
+			<li>1 talento</li>
+			<li>2 competenze in abilità</li>
+			<li>1 lingua</li>
+			<li>1 competenza in un tipo qualsiasi di attrezzo/strumento/veicolo</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Regole aggiuntive:</h4>
+		<p>Bere pozioni conta come azione bonus.</p>
+		<p>Gli stregoni sono l'unica classe che accede alla magia in modo puro quindi possono scegliere se guadagnare slot di magia normalmente e a parte i punti stregoneria o se usare la regola opzionale dei punti magia sommando ad essi i loro punti stregoneria (la somma è il mana) e usandoli intercambiabilmente (Riferirsi alla tabella sottostante).</p>
+		<table id="spell">
+			<tr>
+				<th>Livello di classe</th>
+				<th>Mana disponibile</th>
+				<th>Livello massimo di magia</th>
+				<th>Costo in mana del livello massimo di magia</th>
+			</tr>
+			<tr>
+				<td>Livello 1</td>
+				<td>4 mana</td>
+				<td>Primo</td>
+				<td>2 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 2</td>
+				<td>8 mana</td>
+				<td>Primo</td>
+				<td>2 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 3</td>
+				<td>17 mana</td>
+				<td>Secondo</td>
+				<td>3 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 4</td>
+				<td>21 mana</td>
+				<td>Secondo</td>
+				<td>3 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 5</td>
+				<td>32 mana</td>
+				<td>Terzo</td>
+				<td>5 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 6</td>
+				<td>38 mana</td>
+				<td>Terzo</td>
+				<td>5 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 7</td>
+				<td>45 mana</td>
+				<td>Quarto</td>
+				<td>6 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 8</td>
+				<td>52 mana</td>
+				<td>Quarto</td>
+				<td>6 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 9</td>
+				<td>66 mana</td>
+				<td>Quinto</td>
+				<td>7 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 10</td>
+				<td>74 mana</td>
+				<td>Quinto</td>
+				<td>7 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 11</td>
+				<td>84 mana</td>
+				<td>Sesto</td>
+				<td>9 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 12</td>
+				<td>85 mana</td>
+				<td>Sesto</td>
+				<td>9 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 13</td>
+				<td>96 mana</td>
+				<td>Settimo</td>
+				<td>10 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 14</td>
+				<td>97 mana</td>
+				<td>Settimo</td>
+				<td>10 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 15</td>
+				<td>109 mana</td>
+				<td>Ottavo</td>
+				<td>11 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 16</td>
+				<td>110 mana</td>
+				<td>Ottavo</td>
+				<td>11 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 17</td>
+				<td>124 mana</td>
+				<td>Nono</td>
+				<td>13 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 18</td>
+				<td>132 mana</td>
+				<td>Nono</td>
+				<td>13 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 19</td>
+				<td>142 mana</td>
+				<td>Nono</td>
+				<td>13 mana</td>
+			</tr>
+			<tr>
+				<td>Livello 20</td>
+				<td>153 mana</td>
+				<td>Nono</td>
+				<td>13 mana</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+	<h1 style="color:red; background-color:black;" align="center">INFO RISERVATE AL MASTER</h1>
+	<p>Come ricompensa per archi narrativi personali interessanti alcune divinità o altri poteri possono investire i giocatori facendogli cambiare razza o facendoli diventare miscugli di razze, quando ciò accade i giocatori guadagnano tutti i tratti razziali della nuova razza aggiunta, a differenza di una razza ibrida alla creazione del personaggio che prende solo parte dei bonus di entrambe le razze.</p>
 	</div>
 </body>
 </html>
