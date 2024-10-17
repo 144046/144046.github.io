@@ -34,3 +34,24 @@ body {
   background-color: #04AA6D;
   color: white;
 }
+
+
+.spoiler {
+  color: transparent;
+  background-color: black;
+}
+
+.spoiler:hover{
+  background-color: inherit;
+  color: inherit;
+}
+
+.spoilertopnav {
+  color: transparent;
+  background-color: #333;
+}
+
+.spoilertopnav:hover{
+  background-color: inherit;
+  color: inherit;
+}
