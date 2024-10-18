@@ -17,21 +17,30 @@
 	</div>
 	<style>
 			table{
+				margin: auto;
 				border-collapse: collapse;
 				width: 70%
 			}
 			 td, th{
-				 border: 1px solid #ddd;
+				 border: 1px solid rgba(151,151, 151, 0.6);
 				 padding: 8px;
 				 text-align: center;
 			}
 			tr:nth-of-type(even) td:nth-of-type(even),tr:nth-of-type(odd) td:nth-of-type(odd){
-				background-color:#f2f2f2;;
+				background-color:rgba( 252 ,252 ,252, .5);;
+			}
+			tr:nth-of-type(odd) td:nth-of-type(even),tr:nth-of-type(odd) td:nth-of-type(even){
+				background-color:rgba( 151,151,151, .4);;
+			}
+			tr:nth-of-type(even) td:nth-of-type(odd),tr:nth-of-type(even) td:nth-of-type(odd){
+				background-color:rgba( 151,151,151, .4);;
 			}
 		</style>
 </head>
 <body>
 	<div id="grad"></div>
+	<div id="background">
+	<div id="pagina" style="width: 450px;">
 	<div>
 	<table align="center">
 		<tr>
@@ -54,5 +63,7 @@
 		</tr>
 	</table>
 	</div>
+</div>
+</div>
 </body>
 </html>
