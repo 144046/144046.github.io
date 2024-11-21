@@ -2,109 +2,6 @@
 <html>
 <head>
     <title>Timeline</title>
-    <script type="text/javascript">
-        $(function(){
-
-  
-    var getTextNodesIn = function(el) { // Look at all the page elements and returns the text nodes
-        return $(el).find(":not(iframe,script)").addBack().contents().filter(function() {
-            return this.nodeType == 3; // Text node types are type 3
-        });
-    };
-
-    // var textNodes = getTextNodesIn($("p, h1, h2, h3","*"));
-    var textNodes = getTextNodesIn($("p"));
-
-    function isLetter(char) {
-        return /^[\d]$/.test(char);
-    }
-
-    var wordsInTextNodes = [];
-    for (var i = 0; i < textNodes.length; i++) {
-        var node = textNodes[i];
-
-        var words = []
-
-        var re = /\w+/g;
-        var match;
-        while ((match = re.exec(node.nodeValue)) != null) {
-
-            var word = match[0];
-            var position = match.index;
-
-            words.push({
-                length: word.length,
-                position: position
-            });
-        }
-
-        wordsInTextNodes[i] = words;
-    };
-
-    function messUpWords () {
-
-        for (var i = 0; i < textNodes.length; i++) {
-
-            var node = textNodes[i];
-
-            for (var j = 0; j < wordsInTextNodes[i].length; j++) {
-
-                // Only change a tenth of the words each round.
-                if (Math.random() > 1/10) {
-
-                    continue;
-                }
-
-                var wordMeta = wordsInTextNodes[i][j];
-
-                var word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length);
-                var before = node.nodeValue.slice(0, wordMeta.position);
-                var after  = node.nodeValue.slice(wordMeta.position + wordMeta.length);
-
-                node.nodeValue = before + messUpWord(word) + after;
-            };
-        };
-    }
-
-    function messUpWord (word) {
-
-        if (word.length < 3) {
-
-            return word;
-        }
-
-        return word[0] + messUpMessyPart(word.slice(1, -1)) + word[word.length - 1];
-    }
-
-    function messUpMessyPart (messyPart) {
-
-        if (messyPart.length < 2) {
-
-            return messyPart;
-        }
-
-        var a, b;
-        while (!(a < b)) {
-
-            a = getRandomInt(0, messyPart.length - 1);
-            b = getRandomInt(0, messyPart.length - 1);
-        }
-
-        return messyPart.slice(0, a) + messyPart[b] + messyPart.slice(a+1, b) + messyPart[a] + messyPart.slice(b+1);
-    }
-
-    // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    function getRandomInt(min, max) {
-        
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
-
-    setInterval(messUpWords, 50);
-});
-
-
-    </script>
     <link rel="stylesheet" type="text/css" href="CSS/Topnav.css">
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
@@ -124,9 +21,31 @@
     <div id="grad"></div>
     <div id="background">
     <div id="pagina">
-  <p>ciao come stai? mi chiamo celeste strazzi e questa e una prova per vedere se il codice funziona</p>
-</div>
-</div>
 
+  <p> <span id="1">Era del</span>le Origini
+\<span id="2">Creazionewgh del Mondo: Gli Dei fo</span>rgiarono il mon<span id="3">do dalle acquehytyprimordiali, sep</span>arando il cielo<span id="4"> dalla t</span>rra e cr<span id="5">eando i quattro e</span>lementi: fuoco, acqua, te</span>rra e ariw. rwDa questi elementi nacquero le razze antiche (Elf<span id="6">i, Dwarfi, Draghi, e Spiriti della Natura)
+Il Primo Albori:htfghbd Le razze htrimitive si sviluppano, e nascono i </span>primi regnigfd: i Regni degli <span id="7">Elfi, i Clan dei Dwarfi</span> e le t<span id="8">ribù umane nomadjji. Gli Dejnno loro uil don</span>o della magia.
+Era 7tdella Conqu
+La Gujrand<span id="9">e Guerra dei Draghi: Un conflitwtryto devastante tra i Draghi e gli altri popoli, dove le antich</span>e creature volanti cercarono dfdhg dominare il<span id="10"> mondo. i Efi</span> e i Dwarfi si alleano per fermarli.
+L'Unioghjyne de Terre: Gli umani, inizialme<span id="11">nte divisi, s</span>i uniscon<span id="12">o sotto un unic</span>o impero<span id="13">, creando la prima gnde potenza te</span>rrestre. Lmagia comin<span id="14">cia a diffonders</span> anche tra gli umani.
+La Cgfjaduta dei Draghi: Dopo secoli di battaglia, i Draghi so<span id="15">o sconf</span>itti grazie all'innto degli Dei,<span id="16"> ma la loro estinzine cia il mondo segnato e le terre desolate.
+Era dell</span>a Magia
+La Rivelazione <span id="17">del Cristall</span>o di L<span id="18">una: Una pie magica, dotata di poteri illimitati, e scopertea nellertw Monte di Ardhgent. Gli umani, gli Elfi e i Dwarcercano di impossrsene, dando </span>origine a conflitti su larga scala.g
+L'Alleanza delle Razze: Dopo un lungo periodo di guerre, lesdfgg razze decssdfgideranno di unirsi per pre<span id="19">servare l'equilibrdel mondojhgf. Viene iituito il C</span>onsiglio delle Razze, con rappresentanti di ogni specie.
+Il Rislio dei Sentieri OscurUna fazioalvagi<span id="20">a, conosciuta come i "Maggiori Ombre", sc</span>opre come usare la magia oscura, metuytutyendo in pericolo l'inter<span id="21">o mondo.
+Era dl'E</span>uilibrio<span id="22">
+La Ga dei Maghi: Le forze oscure lanciano un attacco con magia proi</span>ta, ma un gruppo di eroi riesce a sigillare il potere oscuro con l'aiuto di un antico artefatto, il Sigillo di Luma. La guerra decima le terre, ma il Sigillo stabilizza l'uso della magia.
+Il Rinascimen<span id="23">to delle Terre</span>: Le terre d<span id="24">istrutte hjla guerrajkengonoitrite. Si ondanukhjove città,regni e </span>villaggi. La magi<span id="25">a diventa</span> part<span id="26">e della vita quotidiana, ma è soggetta a leggi severe.
+La Profezia della Lunga Notte: Una prof</span>ezia nra che un nuovo oscuramento minaccer<span id="27">à il mon</span>do, ma nes<span id="28">suno sa quando avverrà. Gli eroi scelti dal destino cominciano</span> a cercare indizi, e cresce la paura d<span id="29">i una n</span>uov<span id="30">a catastrofe imminente.
+Era del Rinnovamento
+Il Risveg</span>lio dell<span id="31">e AnticTerre: Un'antica civiltà dimenticata</span>, quella dei "Velocir", riemerge dai recessi più remoti del mondo, portando con sé conoscenze e poteri dimenticati. Le terre perdute vengono rivelate, e nuovoperte riguardo la magia ge le rsazze ancdfgnestrali vengono fatte.<span id="32">
+La Guerra dell'Equilibr</span>io:Un conlitto fsd lerze oscure e quelle luminose scuote il mondo, ma alla fine si giunge a <span id="33">una nuov</span>a pace, con gli er<span id="34">oi che r</span>estaurano il potere degli Dei. Il mondo è di nuovo sin equilibrio, ma il futuro è incerto.
+Un Nuovo<span id="35"> Inizio: Gl</span>i er<span id="36">edi degli antichi eroi si pre</span>parano a<span id="37"> scrivere una nuova era, mentrjhgdfe un rinnovato Consiglio delle Razze lavora per garantire che l'oscurità non torni mai più. Tuttavia, le forze oscure attendono nell'ombra, pronte a fare il loro ritorno.
+Questa timeline copre una vasta gamma di event</span>i che possono essere <span id="38">intrecciati in una serie di racnti o aventu Puoi erpandere</span>ogni era con eventi più dettagliati o aggiungere altre ere a seconda della narrazione che vuoi<span id="39"> svilupp</span>are. </p>
+</div>
+</div>
+<script src="Scripts/jquery-3.7.1.slim.min.js"></script>
+<script src="Scripts/Dislessia.js"></script>
+<script src="Scripts/Strobo.js"></script>
 </body>
 </html>
