@@ -174,3 +174,19 @@ a:hover {
   background-color: transparent;
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+input[type=submit] {
+    cursor:pointer;
+  }
+
+
