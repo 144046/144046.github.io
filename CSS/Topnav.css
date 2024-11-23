@@ -76,7 +76,7 @@ body {
 }
 
 .topnav .back  {
-	float:right;
+  float:right;
 }
 
 .topnav a:hover {
@@ -130,6 +130,34 @@ body {
   background-color: inherit;
   color: inherit;
 }
+
+span.spoiler a:link{
+    color: inherit;
+  background-color: inherit;
+}
+span.spoiler a:visited{
+    color: inherit;
+  background-color: inherit;
+}
+
+span.spoiler:hover a:link{
+  color: blue;
+  background-color: inherit;
+}
+
+span.spoiler:hover a:visited{
+  color:purple;
+  background-color: inherit;
+}
+span.spoiler:hover a:hover{
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+
 
 a:link {
   background-color: transparent;
