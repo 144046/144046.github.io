@@ -94,12 +94,12 @@ $(function(){
 //size randomizer
 
 	function size() {
-	document.getElementById(getRandomInt(0,155)).style.fontSize = getRandomInt(17,23)+"px";
+	document.getElementById(getRandomInt(0,95)).style.fontSize = getRandomInt(17,23)+"px";
 }
 
 //bigscare
 
-var x = getRandomInt(0,155);
+var x = getRandomInt(0,95);
 
 	function bigScare(){
 		
@@ -134,19 +134,19 @@ const colors = [
 
 function color()
 {
-	document.getElementById(getRandomInt(0,155)).style.color = colors[getRandomInt(0,14)] ;
+	document.getElementById(getRandomInt(0,95)).style.color = colors[getRandomInt(0,14)] ;
 }
 
 //corrompere ulteriormente
 
 function corrompo ()
 {
-	document.getElementById(getRandomInt(0,155)).innerHTML = "c̵̬͒'̶͕̤͋ ̸̹̂̊y̷͓̹͋̕m̸̢̬͐͆g̸̙̣̕'̵̦̊́ͅ ̵̺͈̿m̶̠͘g̶̻̭͒ȑ̶̲̚'̷͈̩̅̐ḻ̵͂͌ṳ̶̃̍h̸̫͊ ";
+	document.getElementById(getRandomInt(0,95)).innerHTML = "c̵̬͒'̶͕̤͋ ̸̹̂̊y̷͓̹͋̕m̸̢̬͐͆g̸̙̣̕'̵̦̊́ͅ ̵̺͈̿m̶̠͘g̶̻̭͒ȑ̶̲̚'̷͈̩̅̐ḻ̵͂͌ṳ̶̃̍h̸̫͊ ";
 }
 
 function traduco ()
 {
-	var x = getRandomInt(0,155);
+	var x = getRandomInt(0,95);
 	if (document.getElementById(x).innerHTML == "c̵̬͒'̶͕̤͋ ̸̹̂̊y̷͓̹͋̕m̸̢̬͐͆g̸̙̣̕'̵̦̊́ͅ ̵̺͈̿m̶̠͘g̶̻̭͒ȑ̶̲̚'̷͈̩̅̐ḻ̵͂͌ṳ̶̃̍h̸̫͊ ")
 	{
 		document.getElementById(x).innerHTML = "WE SEE YOU ";
