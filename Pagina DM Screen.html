@@ -19,15 +19,29 @@
 			table{
 				margin: auto;
 				border-collapse: collapse;
-				width: 95%
+				width: 70%
 			}
-			 td, th{
+			 td{
 				 border: 1px solid rgba(151,151, 151, 0.6);
 				 padding: 8px;
+				 text-align: center;
 			}
-			 td:nth-child(even){background-color: rgba( 151,151,151, .4);} 
-			 td:nth-child(odd){background-color: rgba( 252 ,252 ,252, .5);}
-			 td:hover {background-color: rgba(51,51, 51, 0.6);}
+			th{
+				 border: 2px solid rgba(0, 0, 0, 0.4);
+				 padding: 10px;
+				 text-align: center;
+			}
+			tr:nth-of-type(even) td:nth-of-type(even),tr:nth-of-type(odd) td:nth-of-type(odd){
+				background-color:rgba( 252 ,252 ,252, .5);;
+			}
+			tr:nth-of-type(odd) td:nth-of-type(even),tr:nth-of-type(odd) td:nth-of-type(even){
+				background-color:rgba( 151,151,151, .4);;
+			}
+			tr:nth-of-type(even) td:nth-of-type(odd),tr:nth-of-type(even) td:nth-of-type(odd){
+				background-color:rgba( 151,151,151, .4);;
+			}
+			th:nth-child(even){background-color: rgba( 151,151,151, .4);} 
+			 th:nth-child(odd){background-color: rgba( 252 ,252 ,252, .5);}
 		</style>
 </head>
 <body>
@@ -35,14 +49,154 @@
 	<div id="background">
 	<div id="pagina">
 <table>
+	<tr>
+		<th>Velocità di Viaggio:</th>
+		<th>Distanza Oraria:</th>
+		<th>Distanza Giornaliera:</th>
+		<th>Effetto:</th>
+	</tr>
 			<tr>
-				<td><ul><li>Piccolo tornado all'orizzonte</li><br><li>Cavaliere errante che cerca una sfida</li></ul></td>
-				<td><ul><li>Un animale li segue e il suo padrone lo trova</li><br><li>Trovano un ruscello inaspettato, è magico</li></ul></td>
-				<td><ul><li>Un nobile li invita a fargli visita</li><br><li>Una grande festa a cui vengono invitati</li></ul></td>
-				<td><ul><li>Un piccolo terremoto non naturale</li><br><li>Un vecchio amico in fin di vita</li></ul></td>
-				<td><ul><li>Un drago che vola in alto nel cielo</li><br><li>Un Dio si presenta</li></ul></td>
-
+				<td>Veloce (3 metri di velocità in più)</td>
+				<td>6 Km</td>
+				<td>45 Km</td>
+				<td>-5 Percezione Passiva</td>
 			</tr>
+			<tr>
+				<td>Normale (9 metri di velocità)</td>
+				<td>4,5 Km</td>
+				<td>36 Km</td>
+				<td>Nessuno</td>
+			</tr>
+			<tr>
+				<td>Lenta (3 metri di velocità in meno)</td>
+				<td>3 Km</td>
+				<td>27 Km</td>
+				<td>Si può usare Furtività</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<table>
+		<tr>
+			<th>Metodo di Viaggio:</th>
+			<th>Velocità:</th>
+			<th>Costo:</th>
+		</tr>
+		<tr>
+			<td>Cavallo</td>
+			<td>18 metri</td>
+			<td>75 MO</td>
+		</tr>
+		<tr>
+			<td>Pony</td>
+			<td>12 metri</td>
+			<td>30 MO</td>
+		</tr>
+		<tr>
+			<td>Grifone</td>
+			<td>18 metri di volo</td>
+			<td>600 MO</td>
+		</tr>
+		<tr>
+			<td>Carro</td>
+			<td>12 metri</td>
+			<td>85 MO</td>
+		</tr>
+		<tr>
+			<td>Barca a Remi</td>
+			<td>4,5 metri</td>
+			<td>50 MO</td>
+		</tr>
+		<tr>
+			<td>Nave Lunga</td>
+			<td>9 metri</td>
+			<td>10000 MO</td>
+		</tr>
+		<tr>
+			<td>Aereonave</td>
+			<td>24 metri</td>
+			<td>40000 MO</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<table>
+			<tr>
+				<th>Altre Cose:</th>
+				<th>Costo / Pagina:</th>
+			</tr>
+			<tr>
+				<td>Noleggio Carrozza</td>
+				<td>2 MR al Km</td>
+			</tr>
+			<tr>
+				<td>Noleggio Barca</td>
+				<td>1 MA ogni 1,5 Km</td>
+			</tr>
+			<tr>
+				<td>Noleggio Mercenari (Abili/Inesperti/Messaggeri)</td>
+				<td>2 MO/MA/MR al giorno</td>
+			</tr>
+			<tr>
+				<td>Armi</td>
+				<td>Pagina 215</td>
+			</tr>
+			<tr>
+				<td>Armature</td>
+				<td>Pagina 219</td>
+			</tr>
+			<tr>
+				<td>Altro</td>
+				<td>Pagina 223</td>
+			</tr>
+			<tr>
+				<td>Stile di Vita (MO al giorno)</td>
+				<td>0.1/0.2/1/2/4/10</td>
+			</tr>
+			<tr>
+				<td>Alcool</td>
+				<td>5 MR / 1 MA a porzione</td>
+			</tr>
+			<tr>
+				<td>Cibo</td>
+				<td>2 MR - 1 MO a pasto a persona a seconda di qualità</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<table>
+			<tr>
+				<th>Rarità Oggetto Magico:</th>
+				<th>Costo Medio (dimezzato per consumabili):</th>
+				<th>Tempo di Creazione (8 ore di lavoro giornaliere):</th>
+			</tr>
+			<tr>
+				<td>Comune</td>
+				<td>100 MO</td>
+				<td>5 giorni</td>
+			</tr>
+			<tr>
+				<td>Non Comune</td>
+				<td>400 MO</td>
+				<td>10 giorni</td>
+			</tr>
+			<tr>
+				<td>Raro</td>
+				<td>4000 MO</td>
+				<td>50 giorni</td>
+			</tr>
+			<tr>
+				<td>Molto Raro</td>
+				<td>40000 MO</td>
+				<td>125 giorni</td>
+			</tr>
+			<tr>
+				<td>Leggendario</td>
+				<td>200000 MO</td>
+				<td>250 giorni</td>
+			</tr>
+		</table>
+		
 </div>
 </div>
 </body>
