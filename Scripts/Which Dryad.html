@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+	<title> Which Dryad? </title>
+	<link rel="stylesheet" type="text/css" href="../CSS/Topnav.css">
+	<div class="topnav">
+  		<a class="active" href="../index.html">Home</a>
+  		<a href="../Associazioni.html">Associazioni</a>
+  		<a href="../Mondo.html">Mondo</a>
+  		<a href="../NPC.html">NPC</a>
+  		<a href="../Razze.html">Razze</a>
+  		<a href="../Regole.html">Regole</a>
+  		<a href="../Religione.html">Religione</a>
+  		<a href="../Timeline.html">Timeline</a>
+  		<a href="../Masterzone.html"><span class="spoilertopnav"><i>Campagna</i></span></a>
+  		<a href="javascript:history.back()" class="back"><i>Indietro</i></a>
+	</div>
+	<style>
+			table{
+				margin: auto;
+				border-collapse: collapse;
+				width: 45%
+			}
+			 td, th{
+				 border: 1px solid rgba(151,151, 151, 0.6);
+				 padding: 8px;
+				 text-align: center;
+			}
+			 tr:nth-child(even){background-color: rgba( 151,151,151, .4);} 
+			 tr:nth-child(odd){background-color: rgba( 252 ,252 ,252, .5);}
+			 tr:hover {background-color: rgba(51,51, 51, 0.6);}
+		</style>
+
+	<script>
+		let Amanis = 2;
+		let FloweryBreeze = 2;
+		let Lifewood = 2;
+		function barbarian()
+		{
+			if (FloweryBreeze<4) {
+				FloweryBreeze = FloweryBreeze+1;
+			}
+			if (Lifewood >0) {
+				Lifewood=Lifewood-1;
+			}
+		
+			document.getElementById("output").innerHTML = "Barbarian selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+
+		function cleric()
+		{
+			if (Lifewood<4) {
+				Lifewood = Lifewood+1;
+			}
+			if (FloweryBreeze>0) {
+				FloweryBreeze=FloweryBreeze-1;
+			}
+			
+			document.getElementById("output").innerHTML = "Cleric selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+		function fighter()
+		{
+			if (FloweryBreeze<4) {
+				FloweryBreeze = FloweryBreeze+1;
+			}
+			if (Amanis >0) {
+				Amanis=Amanis-1;
+			}
+			
+			document.getElementById("output").innerHTML = "Fighter selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+		function rogue()
+		{
+			if (Amanis<4) {
+				Amanis = Amanis+1;
+			}
+			if (FloweryBreeze >0) {
+				FloweryBreeze=FloweryBreeze-1;
+			}
+			
+			document.getElementById("output").innerHTML = "Rogue selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+		function warlock()
+		{
+			if (Lifewood<4) {
+				Lifewood = Lifewood+1;
+			}
+			if (Amanis >0) {
+				Amanis=Amanis-1;
+			}
+			
+			document.getElementById("output").innerHTML = "Warlock selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+		function wizard()
+		{
+			if (Amanis<4) {
+				Amanis = Amanis+1;
+			}
+			if (Lifewood >0) {
+				Lifewood=Lifewood-1;
+			}
+			
+			document.getElementById("output").innerHTML = "Wizard selected";
+			switch (Amanis) {
+			case 0: document.getElementById("amanis").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("amanis").innerHTML = "1";
+				break;
+			case 2: document.getElementById("amanis").innerHTML = "1-2";
+				break;
+			case 3: document.getElementById("amanis").innerHTML = "1-3";
+				break;
+			case 4: document.getElementById("amanis").innerHTML = "1-4";
+				break;
+			}
+			switch (FloweryBreeze) {
+			case 0: document.getElementById("flowerybreeze").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("flowerybreeze").innerHTML = Amanis+1;
+				break;
+			case 2: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;s
+			case 3: document.getElementById("flowerybreeze").innerHTML = Amanis+1 +"-" + Number(6-Lifewood);
+				break;
+			case 4: document.getElementById("flowerybreeze").innerHTML = Amanis+1 + "-" + Number(6-Lifewood);
+				break;
+			}
+			switch (Lifewood) {
+			case 0: document.getElementById("lifewood").innerHTML = "N/A";
+				break;
+			case 1: document.getElementById("lifewood").innerHTML = "6";
+				break;
+			case 2: document.getElementById("lifewood").innerHTML = "5-6";
+				break;
+			case 3: document.getElementById("lifewood").innerHTML = "4-6";
+				break;
+			case 4: document.getElementById("lifewood").innerHTML = "3-6";
+				break;
+			}
+		}
+
+		function roll()
+		{
+			let x= getRandomInt(1,6);
+			window.alert(x);
+		}
+
+		function getRandomInt(min, max) 
+		{
+ 			const minCeiled = Math.ceil(min);
+  			const maxFloored = Math.floor(max);
+  			return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	<div id="grad"></div>
+	<div id="background">
+	<div id="pagina">
+		<table>
+			<tr>
+				<td>
+					<button onclick="barbarian();" type="button">Barbarian</button>
+				</td>
+				<td>
+					<button onclick="cleric();" type="button">Cleric</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="fighter();" type="button">Fighter</button>
+				</td>
+				<td>
+					<button onclick="rogue();" type="button">Rogue</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="warlock();" type="button">Warlock</button>
+				</td>
+				<td>
+					<button onclick="wizard();" type="button">Wizard</button>
+				</td>
+			</tr>
+		</table>
+		<br>
+				<p id="output"></p>
+		<br>
+		<table>
+			<tr>
+				<td><button onclick="roll();" type="button">Roll</button></td>
+			</tr>
+			<tr>
+				<td id="amanis">
+					1-2
+				</td>
+				<td>
+					Amanis
+				</td>
+			</tr>
+			<tr>
+				<td id="flowerybreeze">
+					3-4
+				</td>
+				<td>
+					Flowery Breeze
+				</td>
+			</tr>
+			<tr>
+				<td id="lifewood">
+					5-6
+				</td>
+				<td>
+					Lifewood
+				</td>
+			</tr>
+		</table>
+
+</div>
+</div>
+</body>
+</html>
